@@ -1,6 +1,7 @@
 package com.tiv.card.audit;
 
 import com.tiv.card.audit.mapper.DocumentMapper;
+import com.tiv.card.audit.utils.Md5Util;
 import com.tiv.card.audit.utils.RedisUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
@@ -29,6 +30,11 @@ public class CardAuditApplicationTest {
     public void RedisTest() {
         redisUtil.set("user", "张三");
         log.info(String.valueOf(redisUtil.get("user")));
+    }
+
+    @Test
+    public void MD5BaseTest() {
+        log.info(Md5Util.md5("123456" + "tiv"));
     }
 
 }
