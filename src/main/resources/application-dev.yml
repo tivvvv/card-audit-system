@@ -29,3 +29,10 @@ mybatis-plus:
 
 logging:
   config: classpath:logback-spring.xml
+
+ftp:
+  client:
+    username: root
+    password: root
+    host: localhost
+    port: 21

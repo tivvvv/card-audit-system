@@ -77,7 +77,7 @@ public class JwtUtil {
                     .parseClaimsJws(token.replace(TOKEN_PREFIX, ""))
                     .getBody();
         } catch (Exception e) {
-            throw new IllegalStateException("Token验证失败：" + e.getMessage());
+            throw new IllegalStateException("Token验证失败:" + e.getMessage());
         }
     }
 
